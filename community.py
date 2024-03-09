@@ -46,8 +46,11 @@ def app():
         for doc in docs:
             d = doc.to_dict()
             try:
-                co2.text_area(label=':green[Posted by:] ' + ':orange[{}]'.format(d['Username']),
-                             value=d['Content'][-1], height=20)
+                co2.markdown(':green[Posted by:] ' + ':orange[{}]'.format(d['Username']), unsafe_allow_html=True)
+                co2.markdown(f"<div style='border: 1px solid #ddd; padding: 5px; background-color: #F0F2F6'>{d['Content'][-1]}</div>", unsafe_allow_html=True)
+                co2.header("\n")
+
+
             except KeyError:
                 co2.write("Error: Missing 'Username' field in a document.")
 

@@ -28,7 +28,9 @@ def app():
                 st.write('Something went wrong..')
                 
         for c in range(len(content)-1,-1,-1):
-            co2.text_area(label='',value=content[c])
+            # co2.text_area(label='',value=content[c])
+            # co2.markdown("**Admin:**", unsafe_allow_html=True)
+            co2.markdown(f"<div style='border: 1px solid #ddd; padding: 5px; background-color: #F0F2F6'>{content[c]}</div>", unsafe_allow_html=True)
             co2.button('Delete Post', on_click=delete_post, args=([c] ), key=c)        
 
         

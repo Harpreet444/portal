@@ -20,7 +20,10 @@ def app():
 
             # Iterate through events in reverse order
             for content in events:
-                co2.text_area(label='Admin', value=content, height=20)  # Remove label
+                # co2.text_area(label='Admin', value=content, height=20)  # Remove label
+                  co2.markdown("**Admin:**", unsafe_allow_html=True)
+                  co2.markdown(f"<div style='border: 1px solid #ddd; padding: 5px; background-color: #F0F2F6''>{content}</div>", unsafe_allow_html=True)
+                  co2.header("\n")
         else:
             co2.write("No 'Content' field found in the 'admin' document.")
     else:
