@@ -19,7 +19,7 @@ st.session_state.db = db
 def app():
 
     co1,co2,co3 = st.columns([1,3,1])
-    co2.title('Welcome to :violet[BBSBC Alumini Portal] :sunglasses:')
+    co2.title('Welcome to :violet[BBSBEC Alumini Portal] :sunglasses:')
 
     if 'username' not in st.session_state:
         st.session_state.username = ''
