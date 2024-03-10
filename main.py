@@ -2,15 +2,15 @@ import streamlit as st
 
 from streamlit_option_menu import option_menu
 
-import account, community, events, your_posts, gallary
+import account, community, events, your_posts, gallary,about
 
 st.set_page_config(
         page_title="BBSBC Alumini Portal",page_icon="LOGO.jpg",layout='wide'
 )
 
-
 # Create columns in the sidebar
 col1, col2, col3 = st.sidebar.columns([0.5, 4, 0.5])
+
 
 with col2:
     st.image("logo.png")  # Replace with your image path
@@ -31,8 +31,8 @@ class MultiApp:
         with st.sidebar:
             app = option_menu(
                 menu_title='BBSBC',
-                options=['Account','Community','Events','Your Posts','Gallery'],
-                icons=['person-circle','house-fill','trophy-fill','chat-fill','info-circle-fill'],
+                options=['Account','Community','Events','Your Posts','Gallery','Developers'],
+                icons=['person-circle','house-fill','trophy-fill','chat-fill','info-circle-fill','gear'],
                 menu_icon='chat-text-fill',
                 default_index=0
                 # styles={
@@ -42,7 +42,7 @@ class MultiApp:
         # "nav-link-selected": {"background-color": "#02ab21"},}
                 
                 )    
-
+            
         if app== 'Community':
             community.app()
         elif app== 'Account':
@@ -53,8 +53,9 @@ class MultiApp:
             your_posts.app()
         elif app == 'Gallery':
             gallary.app()
+        elif app =='Developers':
+            about.app()
         
-
     run()                                         
 
     
