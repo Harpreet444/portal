@@ -5,7 +5,7 @@ from streamlit_option_menu import option_menu
 import account, community, events, your_posts, gallary,about
 
 st.set_page_config(
-        page_title="BBSBC Alumini Portal",page_icon="LOGO.jpg",layout='wide'
+        page_title="BBSBEC Alumini Portal",page_icon="LOGO.jpg",layout='wide'
 )
 
 # Create columns in the sidebar
@@ -30,7 +30,7 @@ class MultiApp:
 
         with st.sidebar:
             app = option_menu(
-                menu_title='BBSBC',
+                menu_title='BBSBEC',
                 options=['Account','Community','Events','Your Posts','Gallery','Developers'],
                 icons=['person-circle','house-fill','trophy-fill','chat-fill','info-circle-fill','gear'],
                 menu_icon='chat-text-fill',
