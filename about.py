@@ -25,8 +25,8 @@ def app():
             reverse=False,
             loop=True,
             quality="medium",  # Adjust quality as needed
-            height=450,
-            width=450,
+            height=None,
+            width=None,
             key=None,
         )
 
