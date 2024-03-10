@@ -18,7 +18,7 @@ def app():
     col1, col2 = st.columns(2)
 
     # Display animation only in the second column
-    with col1:
+    with col2:
         stl.st_lottie(
             lottie_hello,
             speed=1,
@@ -30,12 +30,11 @@ def app():
             key=None,
         )
 
-    col2.header("")
-    col2.header("Team :")
-    col2.subheader(">>> :violet[Prof. Ramanjot Kaur]")
-    col2.subheader(">>> :violet[Harpreet Singh]")
-    col2.subheader(">>> :violet[Harpreet Singh]")
-    col2.subheader(">>> :violet[Harnoor Singh]")
-    col2.subheader(">>> :violet[Harshdeep Singh]")
+    col1.header("Team :")
+    col1.subheader(">>> :violet[Prof. Ramanjot Kaur]")
+    col1.subheader(">>> :violet[Harpreet Singh]")
+    col1.subheader(">>> :violet[Harpreet Singh]")
+    col1.subheader(">>> :violet[Harnoor Singh]")
+    col1.subheader(">>> :violet[Harshdeep Singh]")
 if __name__ == "__main__":
     app()
