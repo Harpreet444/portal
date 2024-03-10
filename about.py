@@ -31,7 +31,6 @@ def app():
         )
 
     col1.header("Team :")
-    col1.subheader(">>> :violet[Prof. Ramanjot Kaur]")
     col1.subheader(">>> :violet[Harpreet Singh]")
     col1.subheader(">>> :violet[Harpreet Singh]")
     col1.subheader(">>> :violet[Harnoor Singh]")
