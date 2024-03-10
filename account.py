@@ -3,6 +3,7 @@ import firebase_admin
 from firebase_admin import firestore
 from firebase_admin import credentials
 from firebase_admin import auth
+import prof
 
 
 cred = credentials.Certificate("alumni-portal-30675-b39489f69d11.json")
@@ -24,7 +25,6 @@ def app():
         st.session_state.username = ''
     if 'useremail' not in st.session_state:
         st.session_state.useremail = ''
-
 
 
     def f(): 
@@ -64,9 +64,6 @@ def app():
         st.session_state.signout = False
         st.session_state.signedout = False   
         st.session_state.username = ''
-
-
-        
     
         
     if "signedout"  not in st.session_state:
@@ -102,11 +99,10 @@ def app():
     if st.session_state.signout:
                 co2.text('Name '+st.session_state.username)
                 co2.text('Email id: '+st.session_state.useremail)
-                co2.button('Sign out', on_click=t) 
-            
-                
-    
+                a,b,c = co2.columns([1,1,1])
+                a.button('Sign out', on_click=t) 
+                prof.app( st.session_state.username)
 
-                            
+                      
     def ap():
         st.write('Posts')

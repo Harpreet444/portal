@@ -8,7 +8,13 @@ st.set_page_config(
         page_title="BBSBC Alumini Portal",page_icon="LOGO.jpg",layout='wide'
 )
 
-st.sidebar.image("logo.png")
+
+# Create columns in the sidebar
+col1, col2, col3 = st.sidebar.columns([0.5, 4, 0.5])
+
+with col2:
+    st.image("logo.png")  # Replace with your image path
+
 
 class MultiApp:
 
