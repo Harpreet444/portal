@@ -34,6 +34,6 @@ def app():
     col1.subheader(">>> :violet[Harpreet Singh]")
     col1.subheader(">>> :violet[Harpreet Singh]")
     col1.subheader(">>> :violet[Harnoor Singh]")
-    col1.subheader(">>> :violet[Harshdeep Singh]")
+    col1.subheader(">>> :violet[Harshpreet Singh]")
 if __name__ == "__main__":
     app()
